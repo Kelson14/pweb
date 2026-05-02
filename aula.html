@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliação: Manutenção de PCs</title>
+    <style>
+        body { font-family: sans-serif; background: #f4f4f4; padding: 20px; }
+        .card { background: white; padding: 20px; border-radius: 8px; max-width: 600px; margin: auto; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        h2 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
+        .question { margin-bottom: 20px; font-weight: bold; }
+        .options label { display: block; background: #ecf0f1; margin: 5px 0; padding: 10px; border-radius: 4px; cursor: pointer; }
+        button { background: #3498db; color: white; border: none; padding: 15px; width: 100%; border-radius: 5px; cursor: pointer; font-size: 16px; }
+        #resultado { margin-top: 20px; font-weight: bold; text-align: center; display: none; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2>Avaliação de Hardware</h2>
+        <div id="quiz">
+            <!-- Pergunta 1 -->
+            <div class="question">1. Qual escala do multímetro usamos para medir a bateria CMOS?</div>
+            <div class="options">
+                <label><input type="radio" name="q1" value="0"> ACV (Alternada)</label>
+                <label><input type="radio" name="q1" value="1"> DCV (Contínua)</label>
+                <label><input type="radio" name="q1" value="0"> Continuidade (Bip)</label>
+            </div>
+
+            <!-- Pergunta 2 -->
+            <div class="question">2. O que significa um componente ser "Onboard"?</div>
+            <div class="options">
+                <label><input type="radio" name="q2" value="0"> Conectado via USB</label>
+                <label><input type="radio" name="q2" value="1"> Integrado na placa-mãe</label>
+                <label><input type="radio" name="q2" value="0"> Instalado em slot extra</label>
+            </div>
+
+            <!-- Pergunta 3 -->
+            <div class="question">3. Qual a principal característica da Corrente Contínua (CC)?</div>
+            <div class="options">
+                <label><input type="radio" name="q3" value="1"> Fluxo em uma única direção</label>
+                <label><input type="radio" name="q3" value="0"> Muda de direção periodicamente</label>
+                <label><input type="radio" name="q3" value="0"> Usada em tomadas de parede</label>
+            </div>
+
+            <button onclick="verificar()">Finalizar Avaliação</button>
+        </div>
+        <div id="resultado"></div>
+    </div>
+
+    <script>
+        function verificar() {
+            let pontos = 0;
+            const respostas = document.querySelectorAll('input[type="radio"]:checked');
+            respostas.forEach(r => pontos += parseInt(r.value));
+            
+            const resDiv = document.getElementById('resultado');
+            resDiv.style.display = 'block';
+            resDiv.innerHTML = `Você acertou ${pontos} de 3 questões!`;
+            if(pontos === 3) resDiv.style.color = 'green';
+            else resDiv.style.color = 'red';
+        }
+    </script>
+</body>
+</html>
