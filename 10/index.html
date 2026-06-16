@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício Prático - Cards de Notícias</title>
+    <style>
+
+        .menu-navegacao {
+            background: #EEE685;
+            font-family: "Trebuchet MS", Helvetica, sans-serif;
+            font-size: 18px;
+            padding: 12px;
+            margin-bottom: 25px;
+        }
+        .menu-navegacao a:link {
+            color: #b9c941;
+            text-decoration: none;
+        }
+        .menu-navegacao a:visited {
+            color: #458B00;
+        }
+        .menu-navegacao a:hover {
+            color: #8B4726;
+        }
+        .menu-navegacao a:active {
+            color: #FF1493;
+        }
+        .menu-navegacao a {
+            margin-right: 20px;
+        }
+
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fafafa;
+            margin: 0;
+            padding: 15px;
+        }
+
+
+        .mural-noticias {
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+    
+        .bloco-noticia {
+            background: #ffffff;
+            border: 1px solid #dcdcdc;
+            width: 48%;
+            float: left;
+            margin: 1%;
+            padding: 16px;
+            box-sizing: border-box;
+            min-height: 160px;
+        }
+
+
+        .limpar-float {
+            clear: both;
+        }
+
+
+        .bloco-noticia header {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 6px;
+        }
+        
+    
+        .origem-terra { color: #5c8a00; font-weight: bold; }
+        .origem-g1 { color: #c00; font-weight: bold; }
+        .origem-cnn { color: #f00; font-weight: bold; }
+        .origem-infomoney { color: #222; font-weight: bold; }
+
+        .bloco-noticia p {
+            font-size: 15px;
+            color: #222222;
+            line-height: 1.35;
+            margin: 0 0 8px 0;
+        }
+
+        .bloco-noticia img {
+            float: right;
+            width: 95px;
+            height: 75px;
+            margin-left: 12px;
+            border: 1px solid #eee;
+        }
+
+        
+        .bloco-noticia footer {
+            font-size: 11px;
+            color: #888888;
+            margin-top: 5px;
+        }
+
+     
+        .rodape-final {
+            margin-top: 30px;
+            padding: 15px;
+            text-align: center;
+            border-top: 2px dashed #EEE685;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="menu-navegacao">
+        <a href="http://www.google.com">Google</a>
+        <a href="http://www.techtudo.com.br/">Tech Tudo</a>
+        <a href="http://www.maujor.com">Maujor</a>
+    </nav>
+
+    
+    <div class="mural-noticias">
+
+        
+        <article class="bloco-noticia">
+            <img src="https://picsum.photos/id/43/95/75" alt="Preview avião">
+            <header class="origem-terra">terra</header>
+            <p>Avião derrapa e explode em aeroporto em Cuiabá; duas pessoas morreram</p>
+            <footer>6 horas atrás</footer>
+        </article>
+
+       
+        <article class="bloco-noticia">
+            <img src="https://picsum.photos/id/48/95/75" alt="Preview G1">
+            <header class="origem-g1">g1</header>
+            <p>Rompimento de lago glacial após fortes chuvas deixa 14 mortos e 102 desaparecidos...</p>
+            <footer>14 horas atrás</footer>
+        </article>
+
+    
+        <article class="bloco-noticia">
+            <img src="https://picsum.photos/id/60/95/75" alt="Preview InfoMoney">
+            <header class="origem-infomoney">InfoMoney</header>
+            <p>Preços no mercado livre operam próximos à estabilidade apesar de seca...</p>
+            <footer>2 horas atrás</footer>
+        </article>
+
+
+        <article class="bloco-noticia">
+            <img src="https://picsum.photos/id/56/95/75" alt="Preview CNN">
+            <header class="origem-cnn">CNN Brasil</header>
+            <p>Três Poderes jamais devem avançar sobre "competências alheias", diz Arthur Lira</p>
+            <footer>4 horas atrás</footer>
+        </article>
+
+
+        <div class="limpar-float"></div>
+    </div>
+
+    <footer class="rodape-final">
+        <p>Postado por: Kelson Andre</p>
+        <p>Contato: <a href="mailto:kelsonandre@gmail.com">kelsonandre@gmail.com</a></p>
+    </footer>
+
+</body>
+</html>
